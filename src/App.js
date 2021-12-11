@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Component from './Profile/Component';
+import img from '../src/Profile/pic.jpg'
 
 function App() {
+  const handlename = (name) => {
+     return (
+       alert(`HELLO ${name}` )
+     )
+  }
+  const prof="Agent commerciale au sien d'une societé francaise privée"
+  const bio="j'ai obtenue mon diplome de technicien en informatique en 2012 ,passionné de théâtre et de cinéma..."
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div ClassName="App">
+    <Component Bio={bio}  profession={prof} hand={handlename}>{img}</Component>
     </div>
   );
 }
